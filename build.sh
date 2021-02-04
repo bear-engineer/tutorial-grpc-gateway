@@ -17,7 +17,7 @@ function goGrpcProtoBuild() {
   {
     echo "-- Build [go grpc proto] --"
     protoc -I. -I$GRPC_GATEWAY_PATH/third_party/googleapis/ \
-      --go-grpc_out=. proto/*.proto
+      --go-grpc_out=. proto/**/*.proto
     echo "-- Build END --"
   } || {
     echo "-- Fail Build --"
